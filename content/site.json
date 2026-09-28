@@ -1,22 +1,135 @@
 {
   "networkName": "404ErrorNetwork",
   "teamName": "404 Error Found",
-  "description": "The home of 404 Error Found: five people, shared ideas, and a team worth choosing again. Explore CivicEye, AgriPulse and MetrikAI.",
+  "description": "404 Error Found: the team behind our flagship CivicEye, our NexHack project AgriPulse and our national hackathon project MetrikAI.",
   "siteUrl": "",
-  "theme": {"background":"#101310","surface":"#191d18","accent":"#c8f17d","text":"#f3f4ed","muted":"#a1a99a","line":"#343c30"},
-  "hero": {"eyebrow":"A team we found. A team we choose.","description":"Not just the projects we build.\nThe people we keep choosing.","note":"Different minds. Shared ideas. Our own little corner of the internet."},
-  "story": {"title":"The best part was always the people.","intro":"404 Error Found is the team behind our shared projects, from a passion project to our NexHack trip and SIH work. This is a home for the things we build and the people who make building them worthwhile.","quote":"If I had to choose a team all over again, I’d choose these people. Every single time.","gratitude":"To Aswathram, Koushik, Himesh and Niranjhan: thank you for the ideas, the conversations, and for being the people I want beside me when we build something. CivicEye, AgriPulse and MetrikAI matter to me—but this team is what makes the work meaningful. I’m grateful for you, and I’d choose to work with you again and again.","author":"Archit Renjeev"},
+  "theme": {
+    "background": "#101310",
+    "surface": "#191d18",
+    "accent": "#c8f17d",
+    "text": "#f3f4ed",
+    "muted": "#a1a99a",
+    "line": "#343c30"
+  },
+  "hero": {
+    "eyebrow": "A team we found. A team we choose.",
+    "description": "Not just the projects we build.\nThe people we keep choosing.",
+    "note": "Different minds. Shared ideas. Our own little corner of the internet."
+  },
+  "story": {
+    "title": "The best part was always the people.",
+    "intro": "404 Error Found is the team behind our shared projects—from our flagship, CivicEye, to our shortlisted NexHack trip to IITM Delhi and our SIH national hackathon project. This is a home for the things we build and the people who make building them worthwhile.",
+    "quote": "If I had to choose a team all over again, I’d choose these people. Every single time.",
+    "gratitude": "To Aswathram, Koushik, Himesh and Niranjhan: thank you for the ideas, the conversations, and for being the people I want beside me when we build something. CivicEye, AgriPulse and MetrikAI matter to me—but this team is what makes the work meaningful. I’m grateful for you, and I’d choose to work with you again and again. One day, I hope we’ll turn that shared energy into a startup of our own.",
+    "author": "Archit Renjeev"
+  },
   "projects": [
-    {"id":"civiceye","name":"CivicEye","context":"Our passion project","number":"01","visual":"city","summary":"An idea close to our hearts. A project we get to call our own.","detail":"CivicEye is our passion project. It is part of the work that brings 404 Error Found together, and it has its own website where you can explore it further.","url":"https://civiceye.co.in","linkLabel":"Visit CivicEye"},
-    {"id":"agripulse","name":"AgriPulse","context":"Our NexHack trip","number":"02","visual":"plant","summary":"The project connected to our NexHack trip. A shared chapter in our story.","detail":"AgriPulse is our project from the NexHack trip. We’ll add the project story, technical details and contributions here when the team shares them.","url":"","linkLabel":""},
-    {"id":"metrikai","name":"MetrikAI","context":"Our SIH project","number":"03","visual":"signal","summary":"Our SIH project. Another idea that brought us to the same table.","detail":"MetrikAI is our SIH project. Its detailed brief, team contributions and project links will be added when the team provides them.","url":"","linkLabel":""}
+    {
+      "id": "civiceye",
+      "name": "CivicEye",
+      "context": "Our flagship project",
+      "visual": "city",
+      "url": "https://civiceye.co.in",
+      "linkLabel": "Visit CivicEye",
+      "description": "CivicEye is the flagship and passion project of 404 Error Found. A shared idea we care deeply about and continue to build together.",
+      "problemStatement": "",
+      "idealSolution": "",
+      "lessonsLearned": "",
+      "flagship": true,
+      "eventName": "",
+      "eventType": "",
+      "eventVenue": "",
+      "eventLocation": "",
+      "eventOutcome": "",
+      "tech": "",
+      "repository": ""
+    },
+    {
+      "id": "agripulse",
+      "name": "AgriPulse",
+      "context": "NexHack · IITM Delhi",
+      "visual": "plant",
+      "url": "",
+      "linkLabel": "",
+      "description": "AgriPulse was our project for the NexHack hackathon at IITM Delhi. We were shortlisted and travelled to Delhi, but narrowly missed making the elimination round.",
+      "problemStatement": "",
+      "idealSolution": "",
+      "lessonsLearned": "",
+      "flagship": false,
+      "eventName": "NexHack",
+      "eventType": "Hackathon",
+      "eventVenue": "IITM Delhi",
+      "eventLocation": "Delhi",
+      "eventOutcome": "Shortlisted and travelled to Delhi; narrowly missed making the elimination round.",
+      "tech": "",
+      "repository": ""
+    },
+    {
+      "id": "metrikai",
+      "name": "MetrikAI",
+      "context": "SIH · National hackathon",
+      "visual": "signal",
+      "url": "",
+      "linkLabel": "",
+      "description": "MetrikAI is our SIH project, created for a national hackathon.",
+      "problemStatement": "",
+      "idealSolution": "",
+      "lessonsLearned": "",
+      "flagship": false,
+      "eventName": "SIH",
+      "eventType": "National hackathon",
+      "eventVenue": "",
+      "eventLocation": "",
+      "eventOutcome": "",
+      "tech": "",
+      "repository": ""
+    }
   ],
   "members": [
-    {"id":"archit","name":"Archit Renjeev","initials":"AR","caption":"Backend-focused · AI & DS student","profileUrl":"https://architspace.vercel.app","linkLabel":"Workspace & portfolio"},
-    {"id":"aswathram","name":"Aswathram","initials":"AS","caption":"404 Error Found","profileUrl":"","linkLabel":""},
-    {"id":"koushik","name":"Koushik","initials":"KO","caption":"404 Error Found","profileUrl":"","linkLabel":""},
-    {"id":"himesh","name":"Himesh","initials":"HI","caption":"404 Error Found","profileUrl":"","linkLabel":""},
-    {"id":"niranjhan","name":"Niranjhan","initials":"NI","caption":"404 Error Found","profileUrl":"","linkLabel":""}
+    {
+      "id": "archit",
+      "name": "Archit Renjeev",
+      "initials": "AR",
+      "caption": "Backend-focused · Tech & gaming enthusiast",
+      "profileUrl": "https://architspace.vercel.app",
+      "linkLabel": "Workspace & portfolio"
+    },
+    {
+      "id": "aswathram",
+      "name": "Aswathram",
+      "initials": "AS",
+      "caption": "404 Error Found",
+      "profileUrl": "",
+      "linkLabel": ""
+    },
+    {
+      "id": "koushik",
+      "name": "Koushik",
+      "initials": "KO",
+      "caption": "404 Error Found",
+      "profileUrl": "",
+      "linkLabel": ""
+    },
+    {
+      "id": "himesh",
+      "name": "Himesh",
+      "initials": "HI",
+      "caption": "404 Error Found",
+      "profileUrl": "",
+      "linkLabel": ""
+    },
+    {
+      "id": "niranjhan",
+      "name": "Niranjhan",
+      "initials": "NI",
+      "caption": "404 Error Found",
+      "profileUrl": "",
+      "linkLabel": ""
+    }
   ],
-  "links": {"repository":"https://github.com/Crepify/404ErrorNetwork","archispace":"https://architspace.vercel.app","civiceye":"https://civiceye.co.in"}
+  "links": {
+    "repository": "https://github.com/Crepify/404ErrorNetwork",
+    "archispace": "https://architspace.vercel.app",
+    "civiceye": "https://civiceye.co.in"
+  }
 }

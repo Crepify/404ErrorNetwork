@@ -10,17 +10,17 @@ Some teams are remembered for what they build. Others are remembered for how it 
 
 ### CivicEye
 
-Our passion project. An idea close to our hearts and part of the work we get to call our own.
+Our flagship and passion project. An idea close to our hearts and part of the work we get to call our own.
 
 [Explore CivicEye](https://civiceye.co.in)
 
 ### AgriPulse
 
-Our project from the NexHack trip. A shared chapter in the 404 Error Found story, with more project details to come.
+Our project for NexHack at **IITM Delhi**. We were shortlisted and travelled to Delhi, but narrowly missed making the elimination round. A real chapter in the team’s journey, with the detailed problem, solution and lessons still to be added.
 
 ### MetrikAI
 
-Our SIH project. Another idea that brought the team to the same table. Its detailed story and contributions will be shared as the team adds them.
+Our **SIH national hackathon** project. Another idea that brought the team to the same table. Its detailed story and contributions will be shared as the team adds them.
 
 ## Our people
 
@@ -38,12 +38,13 @@ Archit's profile connects to [ArchiSpace](https://architspace.vercel.app), his p
 >
 > — Archit Renjeev
 
-To Aswathram, Koushik, Himesh and Niranjhan: thank you for the ideas, the conversations, and for being the people I want beside me when we build something. CivicEye, AgriPulse and MetrikAI matter to me—but this team is what makes the work meaningful. I’m grateful for you, and I’d choose to work with you again and again.
+To Aswathram, Koushik, Himesh and Niranjhan: thank you for the ideas, the conversations, and for being the people I want beside me when we build something. CivicEye, AgriPulse and MetrikAI matter to me—but this team is what makes the work meaningful. I’m grateful for you, and I’d choose to work with you again and again. One day, I hope we’ll turn that shared energy into a startup of our own.
 
 ## Around the website
 
 - **Our story** celebrates the people behind the projects.
-- **Projects** introduces CivicEye, AgriPulse and MetrikAI, with project detail panels and available links.
+- **Projects** highlights our flagship and gives every project room for its description, problem statement, ideal solution, lessons learned and event journey.
+- **Project Studio** makes room for the next idea: form-based project editing, local drafts, previewing and public-story exchange with ArchiSpace. Drafts remain separate from the published website.
 - **The people** gives each team member a place in the network.
 - **ArchiSpace** connects Archit's team profile to his personal college workspace and portfolio.
 

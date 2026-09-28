@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {normalizeProjects,portableProjects,readProjectFile,projectDefaults} from './project-schema.js';
+const site=JSON.parse(readFileSync(new URL('../content/site.json',import.meta.url),'utf8'));
+test('published defaults contain supplied facts, with unsupplied stories left blank',()=>{const p=normalizeProjects(site.projects);assert(p.find(x=>x.id==='civiceye').flagship);assert.equal(p.find(x=>x.id==='agripulse').eventVenue,'IITM Delhi');assert.equal(p.find(x=>x.id==='metrikai').eventType,'National hackathon');p.forEach(x=>assert.equal(x.lessonsLearned,''));});
+test('team content and shared stories round-trip',()=>{const p=readProjectFile(site);assert.deepEqual(readProjectFile(portableProjects(p)),p);});
+test('public format ignores unknown and private fields',()=>{const p=normalizeProjects([{id:'x',name:'X',nextStep:'SECRET',milestones:[{title:'SECRET'}],notes:'SECRET'}]);assert(!JSON.stringify(p).includes('SECRET'));});
+test('invalid formats, unsafe URLs, duplicate IDs and multiple flagships are rejected',()=>{assert.throws(()=>readProjectFile({version:1,projects:[]}));for(const url of ['javascript:alert(1)','https://user:pass@example.com'])assert.throws(()=>normalizeProjects([{id:'x',name:'X',url}]));assert.throws(()=>normalizeProjects([{id:'x',name:'X'},{id:'x',name:'X'}]));assert.throws(()=>normalizeProjects([{id:'x',name:'X',flagship:true},{id:'y',name:'Y',flagship:true}]));});
+test('unfinished drafts may reload but cannot be exported without a name and valid link',()=>{const p=projectDefaults();p.url='https://';assert.equal(normalizeProjects([p],{allowBlank:true})[0].url,'https://');assert.throws(()=>portableProjects([p]));p.name='New project';assert.throws(()=>portableProjects([p]));p.url='';assert.equal(portableProjects([p]).projects[0].name,'New project');});
