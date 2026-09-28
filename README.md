@@ -16,7 +16,9 @@ Our flagship and passion project. An idea close to our hearts and part of the wo
 
 ### AgriPulse
 
-Our project for NexHack at **IITM Delhi**. We were shortlisted and travelled to Delhi, but narrowly missed making the elimination round. A real chapter in the team’s journey, with the detailed problem, solution and lessons still to be added.
+Our project for NexHack at **IITM Delhi**. We were shortlisted and travelled to Delhi, but narrowly missed making the elimination round. The app aimed to bring leaf scanning, a central marketplace for farmers to sell crops and supporting features into one place.
+
+Looking back, the team had not resolved questions around rural farmers’ trust, the breadth of the use cases, or the loopholes and safeguards an agritech app needs. Too little research left the idea insufficiently grounded. The lesson was clear: research thoroughly, speak with mentors and others, challenge assumptions and focus the scope before building.
 
 ### MetrikAI
 
@@ -44,7 +46,7 @@ To Aswathram, Koushik, Himesh and Niranjhan: thank you for the ideas, the conver
 
 - **Our story** celebrates the people behind the projects.
 - **Projects** highlights our flagship and gives every project room for its description, problem statement, ideal solution, lessons learned and event journey.
-- **Project Studio** makes room for the next idea: form-based project editing, local drafts, previewing and public-story exchange with ArchiSpace. Drafts remain separate from the published website.
+- **Project Studio** makes room for the next idea: form-based project editing, local drafts, previewing and public-story exchange with ArchiSpace. Drafts remain separate from the published website. Its optional online publishing service lets approved teammates share one version of the project stories across both public websites, with revision checks and publication history.
 - **The people** gives each team member a place in the network.
 - **ArchiSpace** connects Archit's team profile to his personal college workspace and portfolio.
 
@@ -53,3 +55,7 @@ The site is intentionally a beginning, not a finished account of everything the 
 ---
 
 **Different ideas. Same people. More together.**
+
+## Open to readers, reserved for editors
+
+Everyone can explore the public website and project stories without an account. Choosing to edit opens a separate sign-in screen; only the five approved, verified team email identities can access the story editor. The private email list is not displayed on the site. When the optional backend is not configured, public browsing remains available and the editor stays locked.

@@ -1,6 +1,6 @@
 {
   "name": "404-error-network",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "description": "404ErrorNetwork \u2014 the home of the 404 Error Found team.",
@@ -8,9 +8,13 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node --test src/project-schema.test.js"
+    "test": "node --test src/*.test.js"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
     "vite": "^8.3.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0"
   }
 }

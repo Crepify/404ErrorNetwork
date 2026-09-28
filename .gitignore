@@ -7,3 +7,7 @@ artifacts/
 *.log
 .DS_Store
 *-check.png
+
+!.env.example
+
+*.private.sql
