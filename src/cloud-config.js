@@ -1,6 +1,9 @@
 // Public configuration only. This is also validated before the production build.
 export function resolveCloudConfig(env={}){
- const url=String(env.VITE_SUPABASE_URL||'').trim(),key=String(env.VITE_SUPABASE_PUBLISHABLE_KEY||'').trim();
+ const first=names=>names.map(name=>String(env[name]||'').trim()).find(Boolean)||'';
+ const url=first(['VITE_SUPABASE_URL','NEXT_PUBLIC_SUPABASE_URL','SUPABASE_URL']);
+ const key=first(['VITE_SUPABASE_PUBLISHABLE_KEY','VITE_SUPABASE_ANON_KEY','NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY','NEXT_PUBLIC_SUPABASE_ANON_KEY','SUPABASE_PUBLISHABLE_KEY','SUPABASE_ANON_KEY']);
+ // Only these explicitly public fields can reach the bundle. Secret/service keys are never fallbacks.
  if(!url&&!key)return {enabled:false,url:'',key:''};
  if(!url||!key)throw Error('Set both VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY, or leave both empty.');
  const u=new URL(url);

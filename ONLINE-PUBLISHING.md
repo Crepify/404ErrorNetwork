@@ -56,7 +56,7 @@ Use **Authentication → URL Configuration**:
 
 Use exact production origins. If you need a test deployment, allow that specific origin deliberately, not every Vercel deployment. Changing the domain later also requires updating these URLs.
 
-Enable the Email provider. Disable public sign-ups for this editor-only project; do not disable email confirmation. Invite Archit and each approved teammate from **Authentication → Users**. Do not give ordinary editors Supabase dashboard/admin access simply to let them edit stories.
+Enable the Email provider. **Turn ON “Confirm email”** in Supabase Authentication’s Email provider settings. Disable public sign-ups for this editor-only project. Do not enable automatic email confirmation. The application uses an emailed one-time link/code for sign-in; entering an address does not create an authenticated session. A connected Vercel integration does not change these Auth settings for you. Invite Archit and each approved teammate from **Authentication → Users**. Do not give ordinary editors Supabase dashboard/admin access simply to let them edit stories.
 
 ### Important: email delivery
 
@@ -96,7 +96,7 @@ VITE_SUPABASE_URL=https://YOUR-PROJECT-REF.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_PUBLIC_PUBLISHABLE_KEY
 ```
 
-Use the project's API/Connect settings to obtain its URL and **publishable** key (`sb_publishable_…`). A legacy `anon` JWT is also supported. These values are public client configuration, not privileged credentials.
+Use the project's API/Connect settings to obtain its URL and **publishable** key (`sb_publishable_…`). A legacy `anon` JWT is also supported. These values are public client configuration, not privileged credentials. The build also accepts common Vercel/Supabase integration aliases: `SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY` (or `SUPABASE_ANON_KEY`), their `NEXT_PUBLIC_` variants, and `VITE_SUPABASE_ANON_KEY`. Explicit `VITE_` values take priority. All accepted keys undergo the same public-key validation; secret/service-role keys are never a fallback.
 
 **Never use a secret key, `service_role` key, database password or Supabase management token.** The build rejects secret/service-role keys and partially configured credentials. RLS and the publishing function—not hiding the public key—protect writes.
 

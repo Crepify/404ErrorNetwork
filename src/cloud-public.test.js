@@ -25,3 +25,5 @@ test('AgriPulse migrates the untouched placeholder, while custom writing and pri
  const p={id:'agripulse',description:previous,problemStatement:'',idealSolution:'',lessonsLearned:'',nextStep:'Private task'};refreshUntouchedAgriPulse(p);assert.match(p.description,/leaf scanning/);assert.match(p.lessonsLearned,/mentors/);assert.equal(p.nextStep,'Private task');
  const custom={id:'agripulse',description:previous,lessonsLearned:'My wording'};refreshUntouchedAgriPulse(custom);assert.equal(custom.description,previous);assert.equal(custom.lessonsLearned,'My wording');
 });
+
+test('Vercel integration public aliases work, and secret-only integration config fails closed',()=>{assert.deepEqual(resolveCloudConfig({SUPABASE_URL:config.url,SUPABASE_PUBLISHABLE_KEY:config.key}),config);assert.deepEqual(resolveCloudConfig({NEXT_PUBLIC_SUPABASE_URL:config.url,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:config.key}),config);assert.throws(()=>resolveCloudConfig({SUPABASE_URL:config.url,SUPABASE_SERVICE_ROLE_KEY:'DO_NOT_USE'}),/both/);assert.throws(()=>resolveCloudConfig({SUPABASE_URL:config.url,SUPABASE_PUBLISHABLE_KEY:'sb_secret_DO_NOT_USE'}),/NEVER/);});

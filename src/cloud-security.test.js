@@ -67,6 +67,7 @@ test('actual PostgreSQL RLS, permissions, validation, audit and stale-revision p
   await db.exec('reset role');await db.exec("update public.story_editor_emails set enabled=false where email='editor1@example.test'");await db.exec('set role supabase_auth_admin');assert.equal((await token(editor)).error.http_code,403);await db.exec('reset role');await db.exec("update public.story_editor_emails set enabled=true where email='editor1@example.test'");
   await db.exec('reset role');await db.query('update auth.users set email_confirmed_at=null where id=$1',[editor]);await db.exec('set role supabase_auth_admin');
   assert.equal((await token(editor)).error.http_code,403);
+  await login(editor);assert.equal((await db.query('select public.can_publish_stories() as allowed')).rows[0].allowed,false);await assert.rejects(publish(projects,1),/Only approved/);
   await db.exec('reset role');await db.query("update auth.users set email_confirmed_at=now(),banned_until=now()+interval '1 day' where id=$1",[editor]);await db.exec('set role supabase_auth_admin');
   assert.equal((await token(editor)).error.http_code,403);
   await db.exec('reset role');await db.query('update auth.users set banned_until=null,email=$1 where id=$2',['changed@example.test',editor]);await db.exec('set role supabase_auth_admin');
